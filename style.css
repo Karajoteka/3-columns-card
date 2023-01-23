@@ -1,0 +1,123 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: 'Lexend Deca', sans-serif;
+}
+body {
+  background-color: var(--very-light-gray);
+}
+.container {
+  width: 350px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+section {
+  padding: 40px;
+}
+section img {
+  width: 50px;
+}
+section h1 {
+  margin: 20px 0;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 3rem;
+  color: var(--very-light-gray);
+}
+section p {
+  font-size: 1.4rem;
+  color: var(--transparent-white);
+}
+section .buttons {
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-light-gray);
+  border-radius: 30px;
+}
+section .buttons:hover {
+  cursor: pointer;
+}
+section .buttons a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 5px 5px 0 0;
+}
+.sedans a {
+  color: var(--bright-orange);
+}
+.suvs {
+  background-color: var(--dark-cyan);
+}
+.suvs a {
+  color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 5px 5px;
+}
+.luxury a {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    margin-top: 150px;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+  }
+  section {
+    height: 400px;
+  }
+  section .buttons {
+    margin-top: 70px;
+  }
+  section .buttons:hover {
+    background-color: none;
+  }
+  .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+  .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+  .sedans div:hover {
+    background-color: var(--bright-orange);
+    border: 2px solid var(--very-light-gray);
+  }
+  .sedans a:hover {
+    color: var(--very-light-gray);
+  }
+  .suvs div:hover {
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray);
+  }
+  .suvs a:hover {
+    color: var(--very-light-gray)
+  }
+  .luxury div:hover {
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray);
+  }
+  .luxury a:hover {
+    color: var(--very-light-gray);
+  }
+}
